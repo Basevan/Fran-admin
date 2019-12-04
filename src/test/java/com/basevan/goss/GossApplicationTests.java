@@ -63,4 +63,9 @@ class GossApplicationTests {
 //        List<MenuDTO> list = menuService.getAllMenu();
     }
 
+    @Test
+    void testMapper(){
+
+    }
+
 }

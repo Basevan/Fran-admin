@@ -67,6 +67,7 @@ public class MenuServiceImpl implements MenuService {
             String pid = map.get("pid") == null ? "" : map.get("pid").toString();
             if( parentId.equals(pid)){
                 Map<String, Object> childNode = new HashMap<String, Object>();
+                childNode.put("index", map.get("id"));
                 childNode.put("domain", map.get("domain"));
                 childNode.put("icon", map.get("icon"));
                 childNode.put("name", map.get("name"));

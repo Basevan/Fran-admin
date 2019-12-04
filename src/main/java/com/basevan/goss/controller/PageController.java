@@ -37,6 +37,7 @@ public class PageController {
 
     @RequestMapping("/getData")
     public JSONObject getData(){
+        //获取全部数据
         List<Map<String,Object>> list = menuService.getAllDataDistinct();
         //规范返回数据格式
         return ResultUtils.success(menuService.getAllMenu(list,"0"));
