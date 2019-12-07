@@ -3,6 +3,7 @@ package com.basevan.goss;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.basevan.goss.biz.MenuService;
+import com.basevan.goss.common.request.MenuQueryVO;
 import com.basevan.goss.common.response.MenuDTO;
 import com.basevan.goss.common.utils.ResultUtils;
 import com.basevan.goss.controller.PageController;
@@ -68,4 +69,14 @@ class GossApplicationTests {
 
     }
 
+    @Test
+    public void testTransfer(){
+        MenuQueryVO menuQueryVO = new MenuQueryVO();
+        menuQueryVO.setDomain("www.baidu.com");
+        menuQueryVO.setIcon("el-icon-search");
+        menuQueryVO.setName("角色管理");
+        menuQueryVO.setType(1);
+        menuQueryVO.setUri("/");
+        pageController.addMenu(menuQueryVO);
+    }
 }
