@@ -73,10 +73,10 @@ public class MenuServiceImpl implements MenuService {
                 childNode.put("name", map.get("name"));
                 childNode.put("uri", map.get("uri"));
                 childNode.put("type",map.get("type"));
-                childNode.put("children", getAllMenu(paramList, map.get("id").toString()));
+                childNode.put("sub_menu", getAllMenu(paramList, map.get("id").toString()));
                 resultList.add(childNode);
             }
         }
-        return JSONObject.parseObject(JSON.toJSONString(resultList).replace(",\"children\":[]", ""), new TypeReference<List<Map<String, Object>>>(){});
+        return JSONObject.parseObject(JSON.toJSONString(resultList).replace(",\"sub_menu\":[]", ""), new TypeReference<List<Map<String, Object>>>(){});
     }
 }
